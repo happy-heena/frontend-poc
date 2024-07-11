@@ -18,6 +18,7 @@
         "map": [
           ["@contents", "./src/contents"],
           ["@action", "./src/contents/action"],
+          ["@component", "./src/contents/component"],
           ["@extension", "./src/contents/extension"],
           ["@constants", "./src/constants"],
           ["@assets", "./src/assets"]

@@ -12,7 +12,7 @@ const defaultRouter = [
     element: <App />,
     children: [
       {
-        path: '/home',
+        path: '/',
         element: <Home />,
       },
       {
