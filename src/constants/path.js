@@ -20,21 +20,22 @@ const MAIN_MENU = [
     path: '/extension',
     name: 'Extension',
   },
+  {
+    id: 'poc',
+    path: '/poc',
+    name: 'POC',
+  },
 ];
 
-const SUB_MENU = [
+const ACTION = [
   {
     id: 'movingBox',
     parent: 'action',
     path: '/action/moving-box',
     name: 'Moving Box',
   },
-  {
-    id: 'smallModal',
-    parent: 'component',
-    path: '/component/small-modal',
-    name: 'Small Modal',
-  },
+];
+const EXTENSION = [
   {
     id: 'googleCalendar',
     parent: 'extension',
@@ -42,5 +43,41 @@ const SUB_MENU = [
     name: 'Google Calendar',
   },
 ];
+const COMPONENT = [
+  {
+    id: 'smallModal',
+    parent: 'component',
+    path: '/component/small-modal',
+    name: 'Small Modal',
+  },
+  {
+    id: 'subMenu',
+    parent: 'component',
+    path: '/component/sub-menu',
+    name: 'Sub Menu',
+  },
+  {
+    id: 'calculator',
+    parent: 'component',
+    path: '/component/calculator',
+    name: 'Calculator',
+  },
+];
+
+const POC = [
+  {
+    id: 'todo',
+    parent: 'poc',
+    path: '/poc/todo',
+    name: 'To DO List',
+  },
+  {
+    id: 'news',
+    parent: 'poc',
+    path: '/poc/news',
+    name: 'News',
+  },
+];
+const SUB_MENU = [...COMPONENT, ...ACTION, ...EXTENSION, ...POC];
 
 export { MAIN_MENU, SUB_MENU };

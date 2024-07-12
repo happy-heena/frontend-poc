@@ -2,6 +2,7 @@ import { Outlet } from 'react-router-dom';
 
 import { Action, MovingBox } from '@action';
 import { Extension, GoogleCalendar } from '@extension';
+import { Todo, News } from '@poc';
 
 import App from '../App';
 import Home from '../contents/common/Home';
@@ -30,7 +31,7 @@ const defaultRouter = [
         ],
       },
       {
-        path: '/lib/*',
+        path: '/extension/*',
         element: <Outlet />,
         children: [
           {
@@ -40,6 +41,24 @@ const defaultRouter = [
           {
             path: 'google-calendar',
             element: <GoogleCalendar />,
+          },
+        ],
+      },
+      {
+        path: '/poc/*',
+        element: <Outlet />,
+        children: [
+          {
+            index: true,
+            element: <Extension />,
+          },
+          {
+            path: 'todo',
+            element: <Todo />,
+          },
+          {
+            path: 'news',
+            element: <News />,
           },
         ],
       },

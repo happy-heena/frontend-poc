@@ -6,6 +6,7 @@
       "@component/*": ["src/contents/component/*"],
       "@extension/*": ["src/contents/extension/*"],
       "@action/*": ["src/contents/action/*"],
+      "@poc/*": ["src/contents/poc/*"],
       "@assets/*": ["src/assets/*"],
       "@constants/*": ["src/constants/*"]
     }

@@ -27,11 +27,12 @@
   background-color: #333;
 }
 
-.gnb-box {
+.gnb-item {
   float: left;
+  width: 120px;
 }
 
-.gnb-item {
+.gnb-link {
   display: block;
   color: white;
   text-align: center;
@@ -39,19 +40,24 @@
   text-decoration: none;
 }
 
-.gnb-item:hover {
+.gnb-link:hover {
   background-color: #111;
 }
 
-.gnb-item.active {
+.gnb-link.active {
   background-color: #4caf50;
 }
 
 .lnb-wrapper {
-  display: none;
+  background-color: #333;
 }
 
 .lnb-item {
+  width: 120px;
+}
+
+.lnb-link {
+  color: #fff;
 }
 
 /* content */
@@ -61,6 +67,7 @@
   margin-right: 20px;
   min-height: calc(100vh - 60px);
   padding-bottom: 60px;
+  background: #e9ecef;
 }
 
 /* footer */

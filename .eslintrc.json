@@ -20,6 +20,7 @@
           ["@action", "./src/contents/action"],
           ["@component", "./src/contents/component"],
           ["@extension", "./src/contents/extension"],
+          ["@poc", "./src/contents/poc"],
           ["@constants", "./src/constants"],
           ["@assets", "./src/assets"]
         ],
