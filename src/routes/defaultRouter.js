@@ -2,7 +2,7 @@ import { Outlet } from 'react-router-dom';
 
 import { Action, MovingBox } from '@action';
 import { Extension, GoogleCalendar } from '@extension';
-import { Todo, News } from '@poc';
+import { Todo, News, TestRedux } from '@poc';
 
 import App from '../App';
 import Home from '../contents/common/Home';
@@ -59,6 +59,10 @@ const defaultRouter = [
           {
             path: 'news',
             element: <News />,
+          },
+          {
+            path: 'test-redux',
+            element: <TestRedux />,
           },
         ],
       },

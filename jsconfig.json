@@ -8,7 +8,9 @@
       "@action/*": ["src/contents/action/*"],
       "@poc/*": ["src/contents/poc/*"],
       "@assets/*": ["src/assets/*"],
-      "@constants/*": ["src/constants/*"]
+      "@constants/*": ["src/constants/*"],
+      "@modules/*": ["src/modules/*"],
+      "@lib/*": ["src/lib/*"]
     }
   }
 }

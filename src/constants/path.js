@@ -77,6 +77,12 @@ const POC = [
     path: '/poc/news',
     name: 'News',
   },
+  {
+    id: 'test-redux',
+    parent: 'poc',
+    path: '/poc/test-redux',
+    name: 'Test Redux',
+  },
 ];
 const SUB_MENU = [...COMPONENT, ...ACTION, ...EXTENSION, ...POC];
 

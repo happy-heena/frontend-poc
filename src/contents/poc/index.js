@@ -1,4 +1,5 @@
-import Todo from '@poc/todo/Todo';
-import News from '@poc/news/News';
+import Todo from './todo/Todo';
+import News from './news/News';
+import TestRedux from './testRedux/TestRedux';
 
-export { Todo, News };
+export { Todo, News, TestRedux };

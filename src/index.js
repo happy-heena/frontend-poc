@@ -1,15 +1,32 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import { configureStore } from '@reduxjs/toolkit';
+import { Provider } from 'react-redux';
+import { createLogger } from 'redux-logger';
+import { thunk } from 'redux-thunk';
+import createSagaMiddleware from 'redux-saga';
 import reportWebVitals from './reportWebVitals';
 import defaultRouter from './routes/defaultRouter';
 import './index.css';
+import rootReducer, { rootSaga } from './modules';
+
+const logger = createLogger();
+const sagaMiddleware = createSagaMiddleware();
+const store = configureStore({
+  reducer: rootReducer,
+  middleware: (getDefaultMiddleware) =>
+    getDefaultMiddleware().concat(logger, thunk, sagaMiddleware),
+});
+sagaMiddleware.run(rootSaga);
 
 const router = createBrowserRouter(defaultRouter);
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <RouterProvider router={router} />
+    <Provider store={store}>
+      <RouterProvider router={router} />
+    </Provider>
   </React.StrictMode>,
 );
 

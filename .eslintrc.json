@@ -14,6 +14,10 @@
   },
   "settings": {
     "import/resolver": {
+      "node": {
+        "extensions": [".js", ".jsx", ".ts", ".tsx"],
+        "moduleDirectory": ["node_modules", "src"]
+      },
       "alias": {
         "map": [
           ["@contents", "./src/contents"],
@@ -22,9 +26,11 @@
           ["@extension", "./src/contents/extension"],
           ["@poc", "./src/contents/poc"],
           ["@constants", "./src/constants"],
-          ["@assets", "./src/assets"]
+          ["@assets", "./src/assets"],
+          ["@modules", "./src/modules"],
+          ["@lib", "./src/lib"]
         ],
-        "extensions": [".js", ".jsx"]
+        "extensions": [".js", ".jsx", ".ts", ".tsx"]
       }
     }
   }
