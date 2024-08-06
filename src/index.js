@@ -6,8 +6,13 @@ import { Provider } from 'react-redux';
 import { createLogger } from 'redux-logger';
 import { thunk } from 'redux-thunk';
 import createSagaMiddleware from 'redux-saga';
+import { tempSetUser, check } from '@modules/user';
 import reportWebVitals from './reportWebVitals';
 import defaultRouter from './routes/defaultRouter';
+import '@fontsource/roboto/300.css';
+import '@fontsource/roboto/400.css';
+import '@fontsource/roboto/500.css';
+import '@fontsource/roboto/700.css';
 import './index.css';
 import rootReducer, { rootSaga } from './modules';
 
@@ -18,7 +23,20 @@ const store = configureStore({
   middleware: (getDefaultMiddleware) =>
     getDefaultMiddleware().concat(logger, thunk, sagaMiddleware),
 });
+
+function loadUser() {
+  try {
+    const user = localStorage.getItem('user');
+    if (!user) return;
+
+    store.dispatch(tempSetUser(user));
+    store.dispatch(check());
+  } catch (e) {
+    console.log('localStorage is not working');
+  }
+}
 sagaMiddleware.run(rootSaga);
+loadUser();
 
 const router = createBrowserRouter(defaultRouter);
 const root = ReactDOM.createRoot(document.getElementById('root'));

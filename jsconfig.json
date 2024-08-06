@@ -10,7 +10,10 @@
       "@assets/*": ["src/assets/*"],
       "@constants/*": ["src/constants/*"],
       "@modules/*": ["src/modules/*"],
-      "@lib/*": ["src/lib/*"]
+      "@lib/*": ["src/lib/*"],
+      "@pages/*": ["src/pages/*"],
+      "@components/*": ["src/components/*"],
+      "@containers/*": ["src/containers/*"]
     }
   }
 }
