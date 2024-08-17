@@ -9,8 +9,10 @@ import auth, { authSaga } from './auth';
 import user, { userSaga } from './user';
 import write, { writeSaga } from './write';
 import post, { postSaga } from './post';
+import common from './common';
 
 const rootReducer = combineReducers({
+  common,
   auth,
   counter,
   todos,
